@@ -7,10 +7,11 @@ import { and, eq } from 'drizzle-orm';
 import bcrypt from 'bcrypt';
 import { OAuth2Client } from 'google-auth-library';
 import { TokenResponse } from "./auth.types";
+import { config } from "../../config/env";
 
 const googleClient = new OAuth2Client(
-    process.env.GOOGLE_CLIENT_ID,
-    process.env.GOOGLE_CLIENT_SECRET
+    config.GOOGLE_CLIENT_ID,
+    config.GOOGLE_CLIENT_SECRET
 );
 
 class AuthService {

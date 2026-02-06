@@ -16,6 +16,9 @@ const envSchema = z.object({
     LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug']).default('info'),
     ACCESS_SECRET: z.string(),
     REFRESH_SECRET: z.string(),
+    GOOGLE_CLIENT_ID: z.string(),
+    GOOGLE_CLIENT_SECRET: z.string(),
+    GOOGLE_REDIRECT_URI: z.string(),
 });
 
 /**
